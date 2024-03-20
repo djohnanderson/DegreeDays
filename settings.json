@@ -1,0 +1,10 @@
+{
+  "biofixDate": "2024-03-05",
+  "lowerThreshold": "50",
+  "password": "Password",
+  "sensorName": "Sensor Name",
+  "timeZoneOffset": "-0800",
+  "totalDegreeDays": 99.35848544440371,
+  "upperThreshold": "88",
+  "userName": "UserName"
+}
