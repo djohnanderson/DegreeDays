@@ -55,3 +55,5 @@ Upon execution, the program retrieves all temperature data from the biofix date 
 Subsequent program runs will automatically download any new temperature data, calculate additional degree days if necessary, and present the updated total.
 
 If you delete any temperature data files in the sensor directory or any degree day entries in DegreeDays.json, the program will recalculate this information during its next run.
+
+All data older than the biofixDate is automatically deleted each time the program is run so old data doesn't accumulate.
