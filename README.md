@@ -13,7 +13,7 @@ To install pysensorpush, follow the instructions provided on the Github pysensor
 ```
 pip3 install pysensorpush
 ```
-Next create a directory and download the DegreeDays code into it. The code package includes two files: DegreeDays.py, the main program file, and Settings.json, which contains the configuration settings required for the program to operate."
+Next create a directory and download the DegreeDays code into it. The code package includes two essential files: DegreeDays.py, the main program file, and Settings.json, which contains the configuration settings required for the program to operate."
 ## Configure Settings
 The settings file is in JSON format, containing name-value pairs. For instance, 'biofixDate' represents the name with a corresponding date value of '2024-03-05' formated as YYYY-MM-DD for the date 5 March 2024:
 ```
