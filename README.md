@@ -1,7 +1,7 @@
 # DegreeDays for SensorPush
 DegreeDays is a Python program  to calculate degree days for insect models used in pest management, such as determining optimal timing for spraying apple orchards to combat codling moths.
 
-These models operate on the principle that an insect's development is closely tied to the ambient temperature. Typically, an insect trap is deployed to mark the biofix date, the date you catch the first adult insect signals the onset of egg-laying. Subsequently, temperature accumulation is monitored over time to compute total degree days. In the case of codling moths, hatching can be anticipated when approximately 250 degree days have accumulated post-egg laying, signaling the ideal time for intervention.
+These models operate on the principle that an insect's development is closely tied to the ambient temperature. Typically, an insect trap is deployed to mark the biofix date, the date you catch the first adult insect signals the onset of egg-laying. Subsequently, temperature accumulation is monitored over time to compute total degree days. In the case of codling moths, hatching can be anticipated when approximately 230 degree days have accumulated post-egg laying, signaling the ideal time for intervention.
 
 This program uses temperature data from a SensorPush gateway and sensors. For information about SensorPush hardware, visit [SensorPush.com](https://www.sensorpush.com/).
 
