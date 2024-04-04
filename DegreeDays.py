@@ -106,7 +106,8 @@ if dateAsDate < date.today():
             names = []
             for key, value in sensors.items():
                 names.append(value['name'])
-            print(f'available names are: {', '.join(f'"{name}"' for name in names)}.')
+            names = ', '.join(f'"{name}"' for name in names)
+            print(f'available names are: {names}.')
         sys.exit()
 
     if sensorName == "":
