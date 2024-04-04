@@ -48,7 +48,7 @@ The program disregards daylight saving time adjustments.
 After configuring the parameters, you can execute the program in a shell, Terminal window, or DOS prompt based on your operating system. Begin by navigating to the directory containing DegreeDays.py. For Mac and Linux systems, input the following commands in the Terminal window or shell:
 ```
 cd directoryContainingDegreeDays
-./DegreeDays.py
+python3 DegreeDays.py
 ```
 Upon execution, the program retrieves all temperature data from the biofix date up to and including yesterday, the last complete day of data. Each day's data is stored in JSON files within a directory named after your sensor. Additionally, a JSON file named DegreeDays.json is generated, containing the degree days for each day. Upon completion, the total degree days will be displayed in the shell.
 
