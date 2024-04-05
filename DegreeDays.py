@@ -51,7 +51,7 @@ def createDegreesForDay (fileName, dateAsDate):
         print(f"An unexpected error occurred reading the data. truncated:'{truncated}'; status:'{status}'.")
         sys.exit()
 
-    temperatureData = samples['sensors'][sensorId]
+    temperatureData = samples['sensors'].get(sensorId, {})
     for sample in temperatureData:
         del sample['gateways']
     temperatureData = sorted(temperatureData, key=lambda x: x['observed'])
@@ -61,17 +61,19 @@ def createDegreesForDay (fileName, dateAsDate):
 
 def calculateDegreeDaysforDay (temperatureData):
     totalDegrees = 0
-    lowerThreshold = float (settings['lowerThreshold'])
-    upperThreshold = float (settings['upperThreshold'])
-    for sample in temperatureData:
-        temperature = float (sample['temperature'])
-        if temperature > upperThreshold:
-            temperature = upperThreshold
-        temperature -= lowerThreshold
-        if temperature < 0:
-            temperature = 0
-        totalDegrees += temperature
-    totalDegrees = totalDegrees / len(temperatureData)
+    numberOfSamples = len(temperatureData)
+    if numberOfSamples != 0:
+        lowerThreshold = float (settings['lowerThreshold'])
+        upperThreshold = float (settings['upperThreshold'])
+        for sample in temperatureData:
+            temperature = float (sample['temperature'])
+            if temperature > upperThreshold:
+                temperature = upperThreshold
+            temperature -= lowerThreshold
+            if temperature < 0:
+                temperature = 0
+            totalDegrees += temperature
+        totalDegrees = totalDegrees / numberOfSamples
     return totalDegrees
 
 settings = readJSONFile ('Settings.json')
