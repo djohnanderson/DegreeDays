@@ -123,6 +123,7 @@ if dateAsDate < date.today():
     dataDirectoryName = dataDirectoryName[:255] #limit to 255 characters
     if (not os.path.exists(dataDirectoryName)):
         os.makedirs(dataDirectoryName)
+        degreeDays = {} #existing data is invalid so delete it
 
     # Delete all data before the biofixDate because we no longer need it
     biofixDateAsString = dateAsDate.isoformat()
