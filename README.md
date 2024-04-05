@@ -3,6 +3,8 @@ DegreeDays is a Python program  to calculate degree days for insect models used 
 
 These models operate on the principle that an insect's development is closely tied to the ambient temperature. Typically, an insect trap is deployed to mark the biofix date, the date you catch the first adult insect signals the onset of egg-laying. Subsequently, temperature accumulation is monitored over time to compute total degree days. In the case of codling moths, hatching can be anticipated when approximately 230 degree days have accumulated post-egg laying, signaling the ideal time for intervention.
 
+You can read more about models here: [Degree-Day Models](https://treefruit.wsu.edu/crop-protection/opm/dd-models/).
+
 This program uses temperature data from a SensorPush gateway and sensors. For information about SensorPush hardware, visit [SensorPush.com](https://www.sensorpush.com/).
 
 DegreeDays computes total degree days by summing the daily degree day values post-biofix date. Each degree day is derived from temperature samples taken at regular intervals throughout the day, typically every minute. Daily values are calculated by measuring the temperature variance between a predefined high and low threshold temperature for each sample and then averaging these variances across all samples taken that day. The standard thresholds used for codling moths are 50 and 88 degrees Fahrenheit, the range of temperature that insect development occurs.
